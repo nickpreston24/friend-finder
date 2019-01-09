@@ -1,0 +1,14 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "find friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "friend"
+  ],
+  "author": "Mike Preston",
+  "license": "ISC"
+}
