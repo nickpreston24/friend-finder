@@ -2,7 +2,7 @@
     "name": "friendfinder",
     "version": "1.0.0",
     "description": "find friends",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
         "test": "mocha"
     },
@@ -14,5 +14,8 @@
     "dependencies": {
         "express": "4.16.4",
         "path": "^0.12.7"
+    },
+    "engines": {
+        "node": "5.3.0"
     }
 }
