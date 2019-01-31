@@ -1,12 +1,14 @@
 var friends = require("../data/friends.js");
-
 module.exports = function (app) {
 
     app.get("/api/friends", function (req, res) {
+        console.log('am i even loaded?')
+
         res.json(friends);
     })
 
-    app.get("/api/friends", function (req, res) {
+    app.post("/api/friends", function (req, res) {
+        console.log('I am route!')
         var bestMatch = {
             name: "",
             photo: "",
