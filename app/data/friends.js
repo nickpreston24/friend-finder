@@ -7,11 +7,10 @@ let friends = [];
 var friendData = [{
         name: "Kylo Ren",
         photo: "https://vignette.wikia.nocookie.net/starwars/images/4/4a/Kylo_Ren_TLJ.png" //  /revision/latest/scale-to-width-down/500?cb=20171223080435
+    }, {
+        name: 'Tinker Bell',
+        photo: "https://upload.wikimedia.org/wikipedia/en/4/4c/TinkerbellDisney.jpg"
     },
-    // {
-    //     name: 'Tinker Bell',
-    //     photo: "https://upload.wikimedia.org/wikipedia/en/4/4c/TinkerbellDisney.jpg"
-    // }, 
     {
         name: 'Seto Kaiba',
         photo: "http://www.less-real.com/imagevault/uploaded/images/part4/Seto.Kaiba.17762.jpg"
