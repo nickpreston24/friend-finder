@@ -1,18 +1,18 @@
 {
-  "name": "friendfinder",
-  "version": "1.0.0",
-  "description": "find friends",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "keywords": [
-    "friend"
-  ],
-  "author": "Mike Preston",
-  "license": "ISC",
-  "dependencies": {
-    "express": "4.16.4",
-    "path": "^0.12.7"
-  }
+    "name": "friendfinder",
+    "version": "1.0.0",
+    "description": "find friends",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "friend"
+    ],
+    "author": "Mike Preston",
+    "license": "ISC",
+    "dependencies": {
+        "express": "4.16.4",
+        "path": "^0.12.7"
+    }
 }
