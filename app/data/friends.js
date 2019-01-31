@@ -54,8 +54,6 @@ const MakeSomeFriends = () => friendData.map(props => friends.push(new Friend(pr
 
 MakeSomeFriends();
 
-// console.log(friends)
-
 module.exports = {
     friends,
     Friend
