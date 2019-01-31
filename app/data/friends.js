@@ -30,33 +30,28 @@ var friendData = [{
     photo: "https://amp.businessinsider.com/images/59721be09d0918319c32a058-750-563.jpg"
 }, ]
 
-function Friend(name, photo_url, scores) {
+function Friend({
+    name,
+    photo,
+    scores = []
+}) {
+
     this.name = name;
-    this.photo = photo_url;
-    this.scores = [];
+    this.photo = photo;
+    this.scores = scores;
 
     this.score = function () {
-        // this.scores = range(1, 10);
-        console.log(randomRange(1, 10))
+        this.scores = fillRandom(1, 5);
+        return this;
     }
 }
 
-const randomInt = (min, max, inclusive = true) => Math.floor(Math.random() * (max - min + (inclusive ? 1 : 0))) + min;
-const randomRange = (min, max, inclusive = true) => Array(Math.ceil((1 + stop - start) / step)).fill(start).map(randomInt(x, y));
-const range = (start, stop, step = 1) => Array(Math.ceil((1 + stop - start) / step)).fill(start).map((x, y) => x + y * step);
-
-function MakeSomeFriends() {
-    friendData.forEach(friend => {
-        friends.push(new Friend({
-            friend
-        }))
-    });
-
-    console.log("friends: \n", friends);
-}
+const randomInt = (min, max, inclusive = true) => Math.floor(Math.random() * (max - min + 1 + (inclusive ? 1 : 0))) + min;
+const fillRandom = (min, max, size = max - min + 1) => Array(size).fill(min).map(_ => randomInt(min, size, inclusive = false));
+const MakeSomeFriends = () => friendData.map(props => friends.push(new Friend(props).score()));
 
 MakeSomeFriends();
-
+// console.log(friends)
 module.exports = {
     friends
 };
