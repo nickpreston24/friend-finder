@@ -1,4 +1,5 @@
-var friends = require("../data/friends.js");
+var {friends, Friend} = require("../data/friends.js");
+
 module.exports = function (app) {
 
     app.get("/api/friends", function (req, res) {
@@ -8,7 +9,7 @@ module.exports = function (app) {
     })
 
     app.post("/api/friends", function (req, res) {
-        console.log('I am route!')
+        // console.log('I am route!')
         var bestMatch = {
             name: "",
             photo: "",
@@ -50,7 +51,7 @@ module.exports = function (app) {
 
         // Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
         // the database will always return that the user is the user's best friend).
-        friends.push(userData);
+        friends.push(new Friend(userData));
 
         // Return a JSON with the user's bestMatch. This will be used by the HTML in the next page
         res.json(bestMatch);

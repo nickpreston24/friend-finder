@@ -2,7 +2,7 @@
  *	Created Date: "01-30-2019"
  */
 
-var friends = [];
+let friends = [];
 
 var friendData = [{
     name: "Kylo Ren",
@@ -51,7 +51,10 @@ const fillRandom = (min, max, size = max - min + 1) => Array(size).fill(min).map
 const MakeSomeFriends = () => friendData.map(props => friends.push(new Friend(props).score()));
 
 MakeSomeFriends();
+
 // console.log(friends)
+
 module.exports = {
-    friends
+    friends,
+    Friend
 };
