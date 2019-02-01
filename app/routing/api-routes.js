@@ -9,7 +9,6 @@ module.exports = function (app) {
     })
 
     app.post("/api/friends", function (req, res) {
-        // console.log('I am route!')
         var bestMatch = {
             name: "",
             photo: "",
